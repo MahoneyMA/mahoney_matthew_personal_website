@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '../../components/layout'
 import Image from 'next/image'
-
+const name = "Matthew's Diploma"
 export default function Education() {
   return(
     <Layout>
