@@ -6,7 +6,7 @@ export default function Interests() {
   return(
     <Layout>
       <Head>
-       <title>Interests</title>
+       <title>Matthew Mahoney | Interests</title>
       </Head>
       <section className = {utilStyles.centerHeading}>
         Interests

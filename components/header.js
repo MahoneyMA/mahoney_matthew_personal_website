@@ -39,7 +39,13 @@ export default function Header({toggle}){
             <Link href = '/'>{name}</Link>
           </h2>
           <section className={utilStyles.linksMD}>
-            <Link href = '/about-me'>   About Me</Link>
+            <div className={styles.dropdown}>
+              <Link href = '/about-me' >   About Me</Link>
+              <div className={styles.dropdownContent}>
+                <Link href='/about-me/education'>Education</Link>
+              </div>
+            </div>
+
             <Link href = '/interests'>  Interests</Link>
             <Link href = '/games'>      Games</Link>
           </section>

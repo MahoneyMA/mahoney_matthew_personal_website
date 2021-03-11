@@ -6,7 +6,7 @@ export default function AboutMe() {
   return(
     <Layout>
       <Head>
-        <title>About Me</title>
+        <title>Matthew Mahoney | About Me</title>
       </Head>
       <section className = {utilStyles.centerHeading}>
         About Me

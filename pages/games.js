@@ -27,11 +27,11 @@ export default class Games extends React.Component {
   return(
     <Layout>
       <Head>
-        <title>Games</title>
+        <title>Matthew Mahoney | Games</title>
       </Head>
-      <section className = {utilStyles.centerHeading}>
+      <h1 className = {utilStyles.centerHeading}>
         Dota
-      </section>
+      </h1>
       <h2>My Most Recent Matches</h2>
       <div className = {gameStyles.gameList}>
       {this.state.loading && !this.state.games && !this.state.heroes ? (
