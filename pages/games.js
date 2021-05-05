@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import GameCard from '../components/gameCard'
 import utilStyles from '../styles/utils.module.css'
 import gameStyles from '../styles/game.module.css'
+import loading from '../styles/loading.module.css'
 import React from 'react'
 
 export default class Games extends React.Component {
@@ -35,7 +36,7 @@ export default class Games extends React.Component {
       <h2>My Most Recent Matches</h2>
       <div className = {gameStyles.gameList}>
       {this.state.loading && !this.state.games && !this.state.heroes ? (
-          <div>loading...</div>
+          <div className={loading.lds_ring}><div></div><div></div><div></div><div></div></div>
           ):(
             <>
               {this.state.games.map((game,index) =>(

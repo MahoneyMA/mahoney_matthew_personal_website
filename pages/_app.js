@@ -1,4 +1,9 @@
 import '../styles/globals.css'
+import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+
+
 
 if(typeof window !== "undefined"){
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -8,6 +13,7 @@ if(typeof window !== "undefined"){
     document.body.classList.remove("dark-theme");
   }
 };
+
 function MyApp({ Component, pageProps }) {
 
 

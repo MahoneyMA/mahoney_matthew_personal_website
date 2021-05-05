@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <div className={utilStyles.headingMd}>
         <p>
           Hi I'm <Link href='/about-me'> Matthew</Link>
         </p>
@@ -25,7 +25,7 @@ export default function Home() {
           </a> or <a href="https://github.com/MahoneyMA" style={{textDecorationLine: "underline"}}> Github</a>
 
         </p>
-      </section>
+      </div>
     </Layout>
     </div>
   )

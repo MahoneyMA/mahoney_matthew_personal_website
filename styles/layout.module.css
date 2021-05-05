@@ -4,6 +4,7 @@
 .header {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   background-color: black;
   color: white;
@@ -20,7 +21,7 @@
   margin: 3rem auto 6rem;
   flex-direction: column;
   align-items: center;
-  max-width: 36rem;
+  max-width: 40rem;
   padding: 0 1rem;
   height: auto;
 }
@@ -41,7 +42,7 @@
 
 /* Links inside the dropdown */
 .dropdownContent a {
-  color: black;
+  color: ;
   padding: 10px 12px;
   text-decoration: none;
   display: block;
@@ -51,4 +52,29 @@
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdownContent {
   display: block;
+}
+.links{
+  padding-top: 10px;
+  font-size: max(2vw,24px);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  transition:.5s;
+}
+
+.links a:hover{
+  transition:.5s;
+  color:grey;
+}
+.hidden{
+  display:none;
+  transition: .5s;
+}
+
+.navbar{
+  display: flex;
+  align-content: center;
+  transition: .5s;
+
 }

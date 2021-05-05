@@ -3,7 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
+import Navbar from "./navbar.js"
 const name = 'Matthew'
+
 export default function Header({toggle}){
 
   return(
@@ -18,12 +20,6 @@ export default function Header({toggle}){
             width={144}
             alt={name}
           />
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          <section className={utilStyles.linksLG}>
-            <Link href = '/about-me'> About Me</Link>
-            <Link href = '/interests'> Interests</Link>
-            <Link href = '/games'> Games</Link>
-          </section>
         </>
       ) : (
         <>
@@ -35,21 +31,12 @@ export default function Header({toggle}){
             width={108}
             alt={name}
           />
-          <h2 className={utilStyles.headingLg}>
-            <Link href = '/'>{name}</Link>
-          </h2>
-          <section className={utilStyles.linksMD}>
-            <div className={styles.dropdown}>
-              <Link href = '/about-me' >   About Me</Link>
-              <div className={styles.dropdownContent}>
-                <Link href='/about-me/education'>Education</Link>
-              </div>
-            </div>
-
-            <Link href = '/interests'>  Interests</Link>
-            <Link href = '/games'>      Games</Link>
-          </section>
         </>
       )}
+      <h2 className={utilStyles.heading2Xl}>
+        <Link href = '/'>{name}</Link>
+      </h2>
+      <Navbar/>
+
     </header>
   )}
