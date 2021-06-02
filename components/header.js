@@ -3,13 +3,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
-import Navbar from "./navbar.js"
+import Navbar from "./navBar.js"
+import TopNav from './topNav.js'
 const name = 'Matthew'
 
 export default function Header({toggle}){
 
   return(
     <header className={styles.header}>
+        <TopNav/>
       {toggle ? (
         <>
           <Image
@@ -36,7 +38,7 @@ export default function Header({toggle}){
       <h2 className={utilStyles.heading2Xl}>
         <Link href = '/'>{name}</Link>
       </h2>
-      <Navbar/>
+
 
     </header>
   )}
