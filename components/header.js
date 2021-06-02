@@ -38,7 +38,5 @@ export default function Header({toggle}){
       <h2 className={utilStyles.heading2Xl}>
         <Link href = '/'>{name}</Link>
       </h2>
-
-
     </header>
   )}

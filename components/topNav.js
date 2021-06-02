@@ -11,7 +11,6 @@ function TopNav(){
   };
 
   return(
-    <>
       <div id = "myTopNav" className= {styles.topnav}>
         <Link href = "/" className={styles.active}>Home</Link>
         <Link href ='/about-me/education'>Education</Link>
@@ -19,7 +18,6 @@ function TopNav(){
         <Link href = '/games'            >Games</Link>
         <FontAwesomeIcon icon={faBars} className = {styles.icon} size="2x" onClick = {toggleNav}></FontAwesomeIcon>
       </div>
-    </>
   )}
 
   export default TopNav
