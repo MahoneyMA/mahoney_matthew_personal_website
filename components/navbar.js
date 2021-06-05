@@ -9,7 +9,6 @@ function Navbar(){
   function handleClick(){
     setActiveState(getActive === true ? false : true);
   };
-
   return(
     <>
       <div className = {styles.navbar}>
@@ -22,6 +21,6 @@ function Navbar(){
         <Link href = '/games'            className={styles.link}>Games</Link>
       </div>
     </>
-  )}
-
+  )
+}
   export default Navbar

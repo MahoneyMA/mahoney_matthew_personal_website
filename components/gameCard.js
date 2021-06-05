@@ -21,9 +21,10 @@ function GameCard(props){
   const hero_id = props.game.hero_id;
   const hero = props.heroes.find(element => element.id === hero_id);
   const game = props.game;
-
+  const start_time = new Date(game.start_time * 1000);
   const minutes = parseInt(game.duration/60,10);
   const seconds = (game.duration%60 < 10 ? "0"+game.duration%60 : game.duration%60)
+
   return(
     <section>
     <button className={accordion.accordion} onClick = {handleClick}>
@@ -39,8 +40,9 @@ function GameCard(props){
           style = {{maxHeight: `${setHeight}`}}
           className={accordion.panel}
           >
-          Match Length:{' '+minutes}:{seconds}
-          </div>
+          <div> {start_time.toString()}</div>
+          <div> Match Length:{' '+minutes}:{seconds}</div>
+        </div>
 
       </section>
     )
