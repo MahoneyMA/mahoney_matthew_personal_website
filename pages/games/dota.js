@@ -1,16 +1,15 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import Layout from '../components/layout'
-import GameCard from '../components/gameCard'
-import utilStyles from '../styles/utils.module.css'
-import gameStyles from '../styles/game.module.css'
-import load from '../styles/loading.module.css'
+import Layout from '../../components/layout'
+import GameCard from '../../components/gameCard'
+import utilStyles from '../../styles/utils.module.css'
+import gameStyles from '../../styles/game.module.css'
+import load from '../../styles/loading.module.css'
 import React, {useState, useEffect} from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowRight, faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 
-export default function Games() {
-
+export default function Dota() {
 
   const [heroes, setHeroes] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -36,9 +35,13 @@ export default function Games() {
   let url = "https://api.opendota.com/api/players/103266538/matches?limit=5&offset=";
   useEffect(()=>{
     async function getGames(){
-      const gamer = await fetch(url11);
-      const gameData = await gamer.json();
-      setGames(gameData);
+      try{
+        const gamer = await fetch(url11);
+        const gameData = await gamer.json();
+        setGames(gameData);
+      }catch(error){
+        console.error(error)
+      }
     }
     getGames();
   },[url11]);
@@ -59,11 +62,17 @@ export default function Games() {
   return(
     <Layout>
       <Head>
-        <title>Matthew Mahoney | Games</title>
+        <title>Matthew Mahoney | Dota</title>
       </Head>
       <h1 className = {utilStyles.centerHeading}>
         Dota
       </h1>
+      <p className = {utilStyles.headingLg}>
+        As someone who regularly plays <a href="https://dota2.com"><u>Dota</u> </a> I
+        thought it would be nice to add a page where anyone can view some details
+        about my most recent matches. I gather the data from the <a href="https://docs.opendota.com">
+        <u>OpenDota api</u></a>
+     </p>
       <h2>My Most Recent Matches</h2>
       <div className = {gameStyles.gameList}>
       {loading ? (
@@ -71,12 +80,12 @@ export default function Games() {
           <div className={load.lds_ring}><div></div><div></div><div></div><div></div></div>
         </>
         ):(
-            <>
-              {games.map((game,index) =>(
-                <GameCard key = {index} game = {game} heroes = {heroes}/>
-              ))}
-            </>
-          )}
+        <>
+          {games.map((game,index) =>(
+            <GameCard key = {index} game = {game} heroes = {heroes}/>
+          ))}
+        </>
+        )}
       </div>
       <div className ={gameStyles.nav}>
         <FontAwesomeIcon icon={faArrowLeft} size="2x"

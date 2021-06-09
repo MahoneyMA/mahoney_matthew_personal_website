@@ -8,13 +8,18 @@ export default function Home() {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="A website coded completely by Matthew Mahoney using React and Next.js"
+        />
       </Head>
       <div className={utilStyles.headingMd}>
         <p>
           Hi I'm <Link href='/about-me'> Matthew</Link>
         </p>
         <p>
-          I am a recent college graduate and aspiring sofware engineer/
+          I am a recent college graduate and aspiring sofware engineer and
           web developer. I am currently updating this website as a means of
           improving my web development skills and centralizing a place where I
           can explore and enjoy some of my hobbies.

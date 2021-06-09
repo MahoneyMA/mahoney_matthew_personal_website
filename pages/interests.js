@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '../components/layout'
+import Date from '../components/date'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 
@@ -21,7 +22,7 @@ export default function Interests({allPostsData}) {
       <section className = {utilStyles.centerHeading}>
         Interests
       </section>
-      <p>Various articles and blog posts written by me.</p>
+      <p className = {utilStyles.headingLg}>Various articles and blog posts written by me.</p>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
        <ul className={utilStyles.list}>
          {allPostsData.map(({ id, date, title }) => (
@@ -31,9 +32,9 @@ export default function Interests({allPostsData}) {
             </Link>
             <br />
             <small className={utilStyles.lightText}>
-              {date}
+              <Date dateString={date} />
             </small>
-            </li>
+          </li>
          ))}
        </ul>
      </section>

@@ -5,17 +5,16 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 
 
 
-if(typeof window !== "undefined"){
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-  if (prefersDarkScheme.matches) {
-    document.body.classList.add("dark-theme");
-  } else {
-    document.body.classList.remove("dark-theme");
-  }
-};
 
 function MyApp({ Component, pageProps }) {
-
+  if(typeof window !== "undefined"){
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    if (prefersDarkScheme.matches) {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+  };
 
   return <Component {...pageProps} />
 }

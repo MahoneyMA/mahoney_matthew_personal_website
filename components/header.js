@@ -1,23 +1,21 @@
-import React from "react"
+import React, {useState} from "react"
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '../styles/layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import styles from '../styles/header.module.css'
 import Navbar from "./navBar.js"
 import TopNav from './topNav.js'
-const name = 'Matthew'
+const name = 'Matthew Mahoney'
 
 export default function Header({toggle}){
 
   return(
-    <header className={styles.header}>
+    <header className={styles.darkHeader}>
         <TopNav/>
       {toggle ? (
         <>
           <Image
-            priority
-            src="/images/profile.jpg"
-            className={utilStyles.borderCircle}
+            src="/images/me.jpg"
+            className={styles.borderCircle}
             height={144}
             width={144}
             alt={name}
@@ -26,16 +24,15 @@ export default function Header({toggle}){
       ) : (
         <>
           <Image
-            priority
-            src="/images/profile.jpg"
-            className={utilStyles.borderCircle}
+            src="/images/me.jpg"
+            className={styles.borderCircle}
             height={108}
             width={108}
             alt={name}
           />
         </>
       )}
-      <h2 className={utilStyles.heading2Xl}>
+      <h2 className={styles.heading2Xl}>
         <Link href = '/'>{name}</Link>
       </h2>
     </header>
