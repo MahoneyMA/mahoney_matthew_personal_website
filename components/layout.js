@@ -11,13 +11,14 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Header toggle = {home}/>
       <main className = {styles.main}>{children}</main>
+      <div className={styles.backToHome}>
       {!home && (
-        <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
-        </div>
+        
       )}
+      </div>
     </div>
   )
 }

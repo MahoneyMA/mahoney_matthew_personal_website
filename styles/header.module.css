@@ -43,7 +43,6 @@
 /* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn {
   font-size: 17px;
-  border-right: 1px solid white ;
   outline: none;
   color: white;
   padding: 5px 16px;
@@ -57,7 +56,6 @@
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
   z-index: 1;
   overflow: hidden;
 
