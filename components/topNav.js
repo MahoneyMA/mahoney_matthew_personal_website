@@ -1,8 +1,7 @@
 import {useState} from "react"
 import Link from 'next/link'
 import styles from '../styles/header.module.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBars, faHome} from "@fortawesome/free-solid-svg-icons";
+
 
 function TopNav(){
   const [getActive, setActiveState] = useState(false);

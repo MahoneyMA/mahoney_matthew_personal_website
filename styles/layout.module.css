@@ -1,7 +1,12 @@
-
+#backToHome{
+  cursor: pointer
+}
 .backToHome {
+  display: flex;
+  flex-direction: column;
   margin: 3rem 0 0;
   padding: 3rem;
+  align-items: center;
 }
 .main{
   display:flex;
