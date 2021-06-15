@@ -94,6 +94,9 @@ export default function Dota() {
         <FontAwesomeIcon icon={faArrowRight} size="2x"
            onClick={()=>setOffset(offset < 9 ?offset + 1:offset)}></FontAwesomeIcon>
       </div>
+      <br/>
+      <p>This page fetches data from the OpenDota api, once to get the heroes in the game, and everytime the
+      the user changes which games they are viewing.</p>
       </Layout>
     )
 }

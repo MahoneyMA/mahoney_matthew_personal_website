@@ -15,12 +15,11 @@ function TopNav(){
     <div id = "myTopNav" className= {styles.topnav}>
         <Link href = "/" className={styles.active}>Home</Link>
         <Link href ='/about-me/education'>Education</Link>
-        <Link href = '/interests'        >Interests</Link>
         <div className = {styles.dropdown}>
-          <div className = {styles.dropbtn}>Games</div>
+          <div className = {styles.dropbtn}>Interests</div>
           <div className = {styles.dropdownContent}>
-            <Link href = '/games/genshin'>Genshin</Link>
-            <Link href = '/games/dota'>Dota2</Link>
+            <Link href = '/interests/dota'>Dota 2</Link>
+            <Link href = '/interests/blog'>Blog</Link>
           </div>
         </div>
 

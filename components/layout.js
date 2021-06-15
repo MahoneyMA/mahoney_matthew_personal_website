@@ -8,7 +8,7 @@ export const siteTitle = "Matthew's Personal Website"
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Header toggle = {home}/>
       <main className = {styles.main}>{children}</main>
       <div className={styles.backToHome}>
@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
           <Link href="/">
             <a>← Back to home</a>
           </Link>
-        
+
       )}
       </div>
     </div>
