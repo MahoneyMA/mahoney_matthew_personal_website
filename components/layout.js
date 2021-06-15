@@ -6,6 +6,7 @@ import utilStyles from '../styles/utils.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBars, faHome} from "@fortawesome/free-solid-svg-icons";
 import Header from './header'
+import Footer from './footer'
 export const siteTitle = "Matthew's Personal Website"
 
 export default function Layout({ children, home }) {
@@ -18,9 +19,9 @@ export default function Layout({ children, home }) {
           <Link href="/">
             <a><FontAwesomeIcon icon={faHome} size="2x" id="backToHome"></FontAwesomeIcon></a>
           </Link>
-
       )}
       </div>
+      <Footer/>
     </div>
   )
 }
